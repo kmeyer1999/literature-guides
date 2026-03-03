@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>押沙龙，押沙龙！— 逐章导览</title>
+  <meta name="description" content="《押沙龙，押沙龙！》威廉·福克纳 — 逐章故事梗概与导读，帮你读懂福克纳的叙事迷宫。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="chapters.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-top">
+      <div class="header-title">
+        <span class="book-label">William Faulkner</span>
+        <h1>押沙龙，押沙龙！</h1>
+        <span class="book-subtitle">Absalom, Absalom!</span>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="切换明暗模式" title="切换明暗模式">
+        <span class="theme-icon-dark">🌙</span>
+        <span class="theme-icon-light">☀️</span>
+      </button>
+    </div>
+    <!-- Tab Nav -->
+    <nav class="tab-nav" role="tablist" aria-label="页面导航">
+      <a class="tab-btn" href="index.html" role="tab" id="tab-map">人物关系图</a>
+      <a class="tab-btn active" href="chapters.html" role="tab" id="tab-chapters" aria-selected="true">逐章导览</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="chapters-main">
+    <div class="section-intro">
+      <h2>逐章梗概 · 导读</h2>
+      <p>《押沙龙，押沙龙！》共九章，采用多叙事者、非线性时间结构。<br />
+        点击任意章节展开故事梗概，并查看读者<strong>容易错失或误解</strong>的关键提示。</p>
+    </div>
+    <div id="chapters-list" role="list" aria-label="章节列表">
+      <!-- Rendered by chapters.js -->
+    </div>
+  </main>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar-wrap" role="status" aria-live="polite">
+    <span id="progress-text">点击章节卡片开始探索</span>
+    <div class="progress-track">
+      <div id="progress-fill"></div>
+    </div>
+  </div>
+
+  <!-- Character bubble tooltip -->
+  <div id="char-tooltip" class="char-tooltip"></div>
+
+  <script src="chapters.js"></script>
+</body>
+
+</html>
